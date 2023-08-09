@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/img_target"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="30dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_immediate_recommendation"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_kid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="100dp"
+        android:src="@mipmap/ic_prize_buoy"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/layout_banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/bg_gray_light_half"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"></LinearLayout>
+
+        <com.cameroon.banner.Banner
+            android:id="@+id/ban_notice"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"></com.cameroon.banner.Banner>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="20dp"
+                android:src="@mipmap/ic_cancel_select" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.hdfex.merchantqrshow.view.DKDragView
+        android:id="@+id/txt_dragView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="100dp"
+        android:background="@mipmap/ic_prize_buoy"
+        android:visibility="gone" />
+</RelativeLayout>

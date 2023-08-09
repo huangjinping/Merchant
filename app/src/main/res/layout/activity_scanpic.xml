@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/background_gray"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/hd_toolbar"
+        layout="@layout/widget_item_toolbar" />
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:orientation="vertical"
+          >
+          <ImageView
+              android:layout_width="200dp"
+              android:layout_height="200dp"
+              android:layout_gravity="center"
+              android:src="@mipmap/ic_defoult"
+              android:layout_marginTop="20dp"
+              android:layout_marginBottom="20dp"
+              android:id="@+id/img_scan_pic"
+              />
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="订单总金额"
+              android:gravity="center"
+              android:padding="5dp"
+              android:textColor="@color/black"
+              />
+          <TextView
+              android:id="@+id/txt_totalAmount"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              tools:text="91923"
+              android:gravity="center"
+              android:padding="3dp"
+              android:textColor="@color/black"
+              android:textStyle="bold"
+              android:textSize="25sp"
+
+              />
+
+          <TextView
+              android:id="@+id/txt_loanAmt"
+              android:layout_width="match_parent"
+              android:gravity="center"
+              android:layout_margin="5dp"
+              android:layout_height="wrap_content"
+              tools:text="商品金额：6700，手续费：120"
+              />
+
+      </LinearLayout>
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:layout_margin="20dp"
+          android:text="方法：客户打开支付宝【扫一扫】进行付款"
+          />
+
+</LinearLayout>

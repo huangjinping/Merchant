@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_username"
+                style="@style/txt_list_item_li"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="张蕾" />
+
+            <TextView
+                android:id="@+id/txt_status"
+                style="@style/txt_list_item_li"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                tools:text="还款金额：1200" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商品名称：" />
+
+            <TextView
+                android:id="@+id/txt_commodityName"
+                style="@style/txt_list_item_li"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="小区名/楼号/单元/楼层/房间号/房间标识" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="贷款金额：" />
+
+            <TextView
+                android:id="@+id/txt_apply_amount"
+                style="@style/txt_list_item_li"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="小区名/楼号/单元/楼层/房间号/房间标识" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分期情况：" />
+
+            <TextView
+                android:id="@+id/txt_duration"
+                style="@style/txt_list_item_li"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="分期情况" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_change_fund"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_blue_button"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="更换资方"
+                android:textColor="@color/white" />
+
+            <ImageView
+                style="@style/line"
+                android:layout_width="1dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/txt_refuse_apply"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="拒绝申请"
+                android:textColor="@color/red_light" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

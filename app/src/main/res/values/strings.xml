@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">优选加</string>
+    <string name="hello">Hello World, XListViewActivity!</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">释放更新</string>
+    <string name="xlistview_header_hint_loading">加载中</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="exit">再次点击将退出系统</string>
+    <string name="upateUrl">release?appName=fenfujun-shangjiaduan</string>
+    <string name="backAmt">需补交</string>
+    <string name="refundAmt">需退还</string>
+    <string name="plan_details">账单详情</string>
+    <string name="periodAmount_duration">￥%1$s * %2$s</string>
+    <string name="preAmt">近期应还款：%s</string>
+    <string name="dueDate">最后还款日：%s</string>
+    <string name="dueDay">扣款日：每月%s日</string>
+    <string name="overdueDays">逾期中（%s天）</string>
+    <string name="overduereason">逾期原因：%s</string>
+    <string name="transaction_record">交易记录</string>
+    <string name="transaction_details">交易详情</string>
+    <string name="administrator">管理员</string>
+    <string name="storeman">业务员</string>
+    <string name="followDays">%s天未跟进</string>
+    <string name="opened_push">已开启 </string>
+    <string name="closed_push">去开启 </string>
+    <string name="yuan">¥ </string>
+
+    <string name="extend_business">
+        <h4 style="color:red;">1.支付宝账号类型说明</h4>
+        <p>
+            支付宝企业账号优先享有花呗分期3期的使用
+        </p>
+        <h4>2.支付宝账号说明</h4>
+        <p>
+            支付宝账户一般为邮箱或手机号，如已绑定邮箱，必须提供邮箱账号；未绑定邮箱的提供手机号。
+        </p>
+        <p>
+            此支付宝账号作为收款账号，请务必保持正确。
+        </p>
+        <h4>3.支付宝PID查询方法</h4>
+        <p>
+            查询方法：登录支付宝-鼠标右键，查询网页源代码-Ctrl+F进行搜索-输入2088进行搜索-以2088开头的16位数字即为PID码
+        </p>
+    </string>
+
+</resources>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+   <LinearLayout
+       android:id="@+id/layout_poptop"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="1"
+        android:background="@color/black_32"
+       android:orientation="vertical"
+       ></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="修改租房信息" />
+
+
+
+            <TextView
+                android:id="@+id/txt_modify_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关闭"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:textSize="18sp"
+                android:textColor="@color/blue_light"
+                />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <EditText
+                    android:id="@+id/et_from"
+                    style="@style/et_common_style"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="根据合同起租日期正确选择"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/tv_common_left_style"
+                    android:layout_centerVertical="true"
+                    android:text="起租日" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/ic_arrow_next_small" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <EditText
+                    android:id="@+id/et_pay_mode"
+                    style="@style/et_common_style"
+                    android:focusable="false"
+                    android:hint="请选择租客首付方式"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/tv_common_left_style"
+                    android:layout_centerVertical="true"
+                    android:text="租客首付方式" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/ic_arrow_next_small" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <EditText
+                    android:id="@+id/et_pay_duration"
+                    style="@style/et_common_style"
+                    android:background="@color/white"
+                    android:focusable="false"
+                    android:hint="请选择需要分期几个月"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/tv_common_left_style"
+                    android:layout_centerVertical="true"
+                    android:text="分期期数" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/ic_arrow_next_small" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <com.hdfex.merchantqrshow.widget.DeleteEditText
+                    android:id="@+id/et_down_payment"
+                    style="@style/et_common_style"
+                    android:hint="请输入每月应付租金"
+                    android:inputType="numberDecimal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/tv_common_left_style"
+                    android:text="月租金" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_marginTop="20dp"
+            style="@style/hd_bt_common_style"
+            android:layout_gravity="center"
+            android:text="保存" />
+    </LinearLayout>
+</LinearLayout>

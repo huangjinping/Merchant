@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/background_gray"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/hd_toolbar"
+        layout="@layout/widget_item_toolbar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="5dp"
+            >
+            <TextView
+                style="@style/txt_list_item_ul"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="姓名"
+                />
+            <EditText
+                android:id="@+id/edt_user_name"
+                style="@style/txt_list_item_ul"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:hint="从通讯录选择更方便"
+                />
+
+            <ImageView
+                android:id="@+id/img_phone_select"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/ic_contact_add"
+                />
+        </LinearLayout>
+        <ImageView
+            android:layout_height="wrap_content"
+            style="@style/line"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="5dp"
+            >
+
+            <TextView
+                style="@style/txt_list_item_ul"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="手机号" />
+
+            <EditText
+                android:id="@+id/edt_user_phone"
+                style="@style/txt_list_item_ul"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLength="11"
+                android:background="@color/transparent"
+                android:hint="请输入正确手机号"
+                android:inputType="phone"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        >
+        <TextView
+            style="@style/txt_list_item_ul"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="标签"
+            />
+        <EditText
+            android:id="@+id/edt_remark"
+            style="@style/txt_list_item_ul"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:hint="输入新标签"
+            />
+
+          <TextView
+              android:id="@+id/txt_select_category"
+              android:textSize="12sp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="选择已有标签 "
+              android:textColor="@color/blue_light"
+              android:drawableRight="@mipmap/ic_arrow_right"
+              />
+    </LinearLayout>
+    <ImageView
+        android:layout_height="wrap_content"
+        style="@style/line"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        >
+        <TextView
+            style="@style/txt_list_item_ul"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="密码"
+            />
+        <EditText
+            android:id="@+id/edt_user_password"
+            style="@style/txt_list_item_ul"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:hint="请设置员工的初始密码"
+            android:inputType="textPassword"
+            />
+
+        <CheckBox
+            android:id="@+id/chc_password"
+            android:layout_width="40dp"
+            android:visibility="gone"
+            android:layout_height="40dp"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        >
+        <TextView
+            style="@style/txt_list_item_ul"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="状态"
+            />
+
+
+        <TextView
+            android:id="@+id/txt_status"
+            android:textSize="12sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="已开启 "
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textColor="@color/blue_light"
+            android:drawableRight="@mipmap/ic_arrow_right"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_height="wrap_content"
+        style="@style/line"
+        />
+
+      <Button
+          android:id="@+id/btn_edit_employee"
+          style="@style/button_submit"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="新增"
+          />
+</LinearLayout>

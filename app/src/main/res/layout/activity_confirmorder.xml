@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray_light2"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="49dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/widget_item_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layer_layout_background"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:padding="5dp">
+
+                        <TextView
+                            style="@style/txtView_confirm_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="商品总价"
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/edt_commodity_price"
+                            style="@style/txtView_confirm_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:paddingRight="15dp"
+                            android:text=""
+                            android:textColor="@color/yellow_light"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        style="@style/line"
+                        android:layout_marginLeft="5dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:padding="5dp">
+
+                        <TextView
+                            style="@style/txtView_confirm_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="首付金额"
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/edt_down_payment"
+                            style="@style/txtView_confirm_order"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="80dp"
+                            android:focusable="true"
+                            android:gravity="right"
+                            android:inputType="numberDecimal"
+                            android:paddingRight="15dp"
+                            android:textColorHint="@color/text_hint2"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        style="@style/line"
+                        android:layout_marginLeft="5dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:padding="5dp">
+
+                        <TextView
+                            style="@style/txtView_confirm_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="分期金额"
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/edt_apply_amount"
+                            style="@style/txtView_confirm_order"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="80dp"
+                            android:focusable="true"
+                            android:gravity="right"
+                            android:inputType="numberDecimal"
+                            android:paddingRight="15dp"
+                            android:textColorHint="@color/text_hint2"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageView style="@style/line" />
+
+                <ImageView
+                    style="@style/line"
+                    android:layout_marginTop="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layer_layout_background"
+                    android:orientation="vertical"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_duration"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:paddingLeft="15dp">
+
+                        <TextView
+                            style="@style/txtView_confirm_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="分期产品"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/edt_order_duration"
+                                style="@style/txtView_confirm_order"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:paddingRight="10dp"
+                                android:textSize="16dp"
+                                tools:text="3期" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="15dp"
+                                android:src="@mipmap/ic_mian_arrow_right" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <ImageView
+                        style="@style/line"
+                        android:layout_marginLeft="15dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="15dp">
+
+                        <TextView
+                            style="@style/txtView_confirm_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:text="月还款额"
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/edt_period_amount"
+                            style="@style/txtView_confirm_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:paddingRight="15dp"
+                            android:textColor="@color/yellow_light"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            android:visibility="invisible"
+                            tools:text="$123" />
+
+                        <TextView
+                            android:id="@+id/txt_managementFees"
+                            style="@style/tv_common_left_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5dp"
+                            android:layout_weight="3"
+                            android:visibility="gone"
+                            tools:text="1200.00元" />
+
+
+                        <TextView
+                            android:id="@+id/txt_open_repayPlan"
+                            style="@style/dialog_btn"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5dp"
+                            android:layout_weight="3"
+                            android:text="查看"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_trainingCycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        style="@style/line"
+                        android:layout_marginLeft="15dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp">
+
+                        <TextView
+                            style="@style/txtView_confirm_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:text="培训周期"
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/edt_trainingCycle"
+                            style="@style/txtView_confirm_order"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:digits="1234567890"
+                            android:focusable="true"
+                            android:gravity="right|center_vertical"
+                            android:hint="请填写培训时长"
+                            android:inputType="numberSigned"
+                            android:maxLength="2"
+                            android:paddingRight="15dp"
+                            tools:text="" />
+
+                        <TextView
+                            style="@style/txtView_confirm_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:text="个月"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        style="@style/line"
+                        android:layout_marginLeft="15dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp">
+
+                        <TextView
+                            style="@style/txtView_confirm_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:text="培训时间"
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/edt_trainingStartDate"
+                            style="@style/txtView_confirm_order"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:gravity="center"
+                            android:hint="开始时间"
+                            android:paddingRight="15dp"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/txtView_confirm_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:text="至"
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/edt_trainingEndDate"
+                            style="@style/txtView_confirm_order"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:hint="结束时间"
+                            android:paddingRight="15dp"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <ImageView style="@style/line" />
+
+                <LinearLayout
+                    android:id="@+id/layout_upload_file"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        style="@style/txtView_nomal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="合同资料（全部拍照上传）"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        style="@style/line"
+                        android:layout_marginLeft="15dp" />
+
+                    <com.hdfex.merchantqrshow.view.MGridView.MGridView
+                        android:id="@+id/grv_lease_contract"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="17dp"
+                        android:layout_marginBottom="36dp"
+                        android:background="@color/white"
+                        android:gravity="center_horizontal"
+                        android:horizontalSpacing="3dp"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="4"
+                        android:verticalSpacing="3dp" />
+
+                    <ImageView style="@style/line" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_submit"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue_light">
+
+        <LinearLayout
+            android:id="@+id/layout_height_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:src="@mipmap/ic_qr_button" />
+
+            <TextView
+                style="@style/txtView_confirm_order"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:text="生成二维码"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

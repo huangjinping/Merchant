@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray_light2"
+    android:orientation="vertical"
+    tools:context="com.hdfex.merchantqrshow.salesman.order.activity.OrderListManagerActivity">
+
+    <include layout="@layout/widget_item_toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+
+        >
+
+        <RelativeLayout
+            android:id="@+id/Layout_un_scan"
+            android:layout_width="match_parent"
+            android:background="@drawable/selector_white_gray"
+            android:layout_height="45dp"
+            >
+
+            <TextView
+                style="@style/txtView_confirm_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="我的二维码" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/ic_arrow_next_small" />
+        </RelativeLayout>
+
+
+        <ImageView style="@style/line"
+            android:layout_marginLeft="15dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/Layout_scan_ed"
+            android:background="@drawable/selector_white_gray"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                style="@style/txtView_confirm_order"
+                android:layout_width="wrap_content"
+                android:textSize="16dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="订单列表" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/ic_arrow_next_small" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

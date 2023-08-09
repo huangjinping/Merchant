@@ -1,0 +1,6 @@
+<resources>
+   <string name="update_message">https://www.hdfex.com/updateDescription.html</string>
+   <string name="update_operation_description">https://hdfex.com/operationDescriptionRefresh.html</string>
+   <string name="update_electronic_contract">https://hdfex.com/pdf/generic/web/viewer.html?file=contract.pdf</string>
+
+</resources>

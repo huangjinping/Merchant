@@ -1,0 +1,351 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray_light2">
+
+    <include
+        android:id="@+id/hd_toolbar"
+        layout="@layout/widget_item_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/hd_toolbar">
+
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/hd_bt_common_style"
+            android:layout_gravity="center"
+            android:text="预览->生成二维码" />
+
+
+        <TextView
+            android:id="@+id/txt_height_view"
+            android:layout_width="160dp"
+            android:layout_height="49dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/black" />
+
+
+        <ScrollView
+            android:id="@+id/sc_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btn_submit"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <com.hdfex.merchantqrshow.widget.DeleteEditText
+                        android:id="@+id/et_live_addrProvince"
+                        style="@style/et_common_style"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="选择省 / 市 / 区"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textStyle="bold" />
+
+                    <com.hdfex.merchantqrshow.widget.DeleteEditText
+                        android:id="@+id/et_live_addrTown"
+                        style="@style/et_common_style"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/et_live_addrProvince"
+                        android:hint="请输入详细地址 如X小区X单元X层X号"
+                        android:maxEms="50"
+                        android:singleLine="false"
+                        android:text=""
+                        android:textStyle="bold" />
+
+                    <TextView
+                        style="@style/tv_common_left_style"
+                        android:layout_marginTop="13dp"
+                        android:text="详细地址" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true">
+
+                        <EditText
+                            android:id="@+id/et_commodity_name"
+                            style="@style/et_common_style"
+                            android:focusable="false"
+                            android:inputType="text"
+                            android:paddingRight="30dp"
+                            android:singleLine="false"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:layout_centerVertical="true"
+                            android:text="选择房间" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/ic_arrow_next_small" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txt_address_add"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/layer_bottom_border"
+                        android:textColor="@color/text_color4"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:visibility="gone"
+                        android:textSize="14sp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone">
+
+                        <com.hdfex.merchantqrshow.widget.DeleteEditText
+                            android:id="@+id/et_customer_name"
+                            style="@style/et_common_style"
+                            android:hint="请输入客户姓名"
+                            android:inputType="text"
+                            android:maxLength="18"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:text="客户姓名" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+
+                        <com.hdfex.merchantqrshow.widget.DeleteEditText
+                            android:id="@+id/et_telephone"
+                            style="@style/et_common_style"
+                            android:background="@color/white"
+                            android:hint="请输入客户手机号"
+                            android:inputType="phone"
+                            android:maxLength="11"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:text="租客手机号" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <ImageView style="@style/line" />
+
+                <ImageView
+                    style="@style/line"
+                    android:layout_marginTop="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <EditText
+                            android:id="@+id/et_from"
+                            style="@style/et_common_style"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="根据合同起租日期正确选择"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:layout_centerVertical="true"
+                            android:text="起租日" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/ic_arrow_next_small" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/et_to"
+                            style="@style/et_common_style"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="请选择"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:layout_centerVertical="true"
+                            android:text="到期日" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/ic_arrow_next_small" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <EditText
+                            android:id="@+id/et_pay_mode"
+                            style="@style/et_common_style"
+                            android:focusable="false"
+                            android:hint="请选择租客首付方式"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:layout_centerVertical="true"
+                            android:text="租客首付方式" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/ic_arrow_next_small" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <EditText
+                            android:id="@+id/et_pay_duration"
+                            style="@style/et_common_style"
+                            android:background="@color/white"
+                            android:focusable="false"
+                            android:hint="请选择需要分期几个月"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:layout_centerVertical="true"
+                            android:text="分期产品" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/ic_arrow_next_small" />
+                    </RelativeLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <com.hdfex.merchantqrshow.widget.DeleteEditText
+                            android:id="@+id/et_down_payment"
+                            style="@style/et_common_style"
+                            android:hint="请输入每月应付租金"
+                            android:inputType="numberDecimal"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:text="月租金" />
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            style="@style/txtView_nomal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:gravity="center_vertical"
+                            android:text="租赁合同（全部拍照上传）"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            style="@style/line"
+                            android:layout_marginLeft="15dp" />
+
+                        <com.hdfex.merchantqrshow.view.MGridView.MGridView
+                            android:id="@+id/grv_lease_contract"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="36dp"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginRight="17dp"
+                            android:layout_marginTop="30dp"
+                            android:background="@color/white"
+                            android:gravity="center_horizontal"
+                            android:horizontalSpacing="3dp"
+                            android:listSelector="@android:color/transparent"
+                            android:numColumns="4"
+                            android:verticalSpacing="3dp" />
+
+                        <ImageView style="@style/line" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView style="@style/line" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,149 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.0"
+
+    dexOptions {
+//        incremental true
+        javaMaxHeapSize "4g"
+    }
+    defaultConfig {
+        applicationId "com.hdfex.merchantqrshow"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 61
+        versionName "V4.8.1"
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi", "x86"
+//          abiFilters  "x86", "armeabi"
+        }
+    }
+
+
+    signingConfigs {
+        key {
+            keyAlias 'shanghuduang'
+            keyPassword 'shanghuduangmimaabcdefg'
+            storeFile file('shanghuduang.jks')
+            storePassword 'shanghuduangmimaabcdefg'
+        }
+    }
+
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+//            shrinkResources false
+            signingConfig signingConfigs.key
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+//            shrinkResources true
+            signingConfig signingConfigs.key
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+//            //是否进行zipalign优化
+//            zipAlignEnabled true
+//            // 移除无用的resource文件
+//            shrinkResources true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+//    applicationVariants.all { variant ->
+//        variant.outputs.each { output ->
+//            def outputFile = output.outputFile
+//            output.outputFile = new File(
+//                    output.outputFile.parent + "/${variant.buildType.name}",
+//                    "优选加-${variant.buildType.name}-${variant.versionName}—${variant.versionCode}.apk".toLowerCase())
+//        }
+//    }
+
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "优选加_${defaultConfig.versionName}.apk"
+        }
+    }
+}
+
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/okhttp-3.0.1.jar')
+    compile files('libs/okio-1.6.0.jar')
+//    compile files('libs/hawk.jar')
+    compile files('libs/gson-2.5.jar')
+    //    compile files('libs/glide-3.7.0.jar')
+    compile project(':pullrefreshlayout')
+    compile project(':library')
+    compile files('libs/umeng_social_tool.jar')
+    compile files('libs/umeng_social_net.jar')
+    compile files('libs/SocialSDK_WeChat_Simplify.jar')
+    compile files('libs/umeng_social_api.jar')
+    compile files('libs/umeng_social_shareboard.jar')
+    compile files('libs/umeng_shareboard_widget.jar')
+    implementation 'com.android.support:design:25.4.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.umeng.analytics:analytics:latest.integration'
+    implementation 'com.karumi:dexter:2.2.2'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.1.16'
+    implementation 'com.kaopiz:kprogresshud:1.0.5'
+    implementation 'io.reactivex:rxjava:1.1.6'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'top.zibin:Luban:1.1.2'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.0@aar'
+    implementation 'com.jakewharton.rxbinding:rxbinding:1.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.google.dagger:dagger:2.4'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.4'
+    implementation 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
+    //java注解
+    implementation 'org.glassfish:javax.annotation:10.0-b28'
+    implementation files('libs/zxing.jar')
+    implementation files('libs/alipaySingle-20170510.jar')
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'
+    implementation 'com.github.huangjinping.HJUtils:flowlayout-lib:v1.0.3'
+    implementation 'com.github.huangjinping.HJUtils:banner:v1.0.3'
+    implementation 'com.hjq:toast:3.0'
+
+    //最新版本
+    compile project(':PushSDK')
+    compile files('libs/TCardApi.jar')
+    compile project(':IDCardLib')
+    compile project(':livenesslib')
+}
+repositories {
+    mavenCentral()
+}
+
+
+def buildTime() {
+    return new Date().format("yyyy-MM-dd HH:mm:ss")
+}

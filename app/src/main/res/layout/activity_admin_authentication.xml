@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/hd_toolbar"
+        layout="@layout/widget_item_toolbar"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        >
+        <TextView
+            android:id="@+id/txt_desc"
+            style="@style/txt_list_item_hl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="请输入身份证号的后四位"
+            android:gravity="center"
+            />
+
+
+        <com.hdfex.merchantqrshow.widget.GridEditText
+            android:id="@+id/gt_pay_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:cursorVisible="true"
+            android:focusable="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+
+            android:inputType="textPassword"
+            android:paddingBottom="25dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            app:multiColor="@color/gray"
+            app:multiTextVisible="false"
+            app:multiLength="4">
+        </com.hdfex.merchantqrshow.widget.GridEditText>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+
+
+       <ImageView
+           android:id="@+id/img_back"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:padding="10dp"
+           android:layout_marginLeft="10dp"
+           android:paddingLeft="15dp"
+           android:paddingRight="15dp"
+           android:src="@mipmap/ic_arrow_left" />
+
+
+       <RadioGroup
+           android:id="@+id/rag_segment"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:visibility="gone"
+           android:layout_gravity="center"
+           android:layout_centerHorizontal="true"
+
+           >
+           <RadioButton
+               android:id="@+id/rad_order_first"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="分期订单"
+               android:textSize="16dp"
+               android:layout_margin="10dp"
+               android:visibility="gone"
+               android:textColor="@color/txt_segment_color"
+               android:button="@null"
+               android:checked="true"
+               />
+           <RadioButton
+               android:id="@+id/rad_order_secend"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:textColor="@color/txt_segment_color"
+               android:textSize="16dp"
+               android:text="货款订单"
+               android:visibility="gone"
+               android:button="@null"
+               />
+           <RadioButton
+               android:id="@+id/rad_order_huabei"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:textColor="@color/txt_segment_color"
+               android:textSize="16dp"
+               android:text="花呗订单"
+               android:button="@null"
+               android:visibility="gone"
+               />
+           <RadioButton
+               android:id="@+id/rad_order_monthly"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:textColor="@color/txt_segment_color"
+               android:textSize="16dp"
+               android:text="月付订单"
+               android:button="@null"
+               android:visibility="gone"
+               />
+       </RadioGroup>
+
+
+
+       <TextView
+           android:id="@+id/tb_tv_titile"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerInParent="true"
+           android:gravity="center"
+           android:text="订单"
+           android:textColor="@color/black"
+           android:textSize="17dp" />
+
+       <ImageView
+           android:id="@+id/img_search"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@mipmap/ic_search"
+           android:layout_alignParentRight="true"
+           android:layout_centerVertical="true"
+           android:paddingLeft="20dp"
+           android:paddingRight="20dp"
+           android:paddingTop="5dp"
+           android:paddingBottom="5dp"
+           />
+   </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        ></LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/hd_toolbar"
+            layout="@layout/widget_item_toolbar" />
+
+        <TextView
+            android:id="@+id/txt_addhouse_alert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_light"
+            android:padding="10dp"
+            android:text="请逐项填写，没有的可不填"
+            android:textColor="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/btn_submit"
+                style="@style/hd_bt_common_style"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="submit"
+                android:text="提交" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/btn_submit"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp">
+
+                    <FrameLayout
+                        android:id="@+id/layout_house_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_gravity="center">
+
+                        <EditText
+                            android:id="@+id/edt_house_type"
+                            style="@style/et_common_style"
+                            android:focusable="false"
+                            android:hint="集中式/分散式"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:text="房间类型" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/ic_arrow_right" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_dispers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <include layout="@layout/layout_disperse"></include>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_centralise"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+                        <include layout="@layout/layout_centralise"></include>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"></LinearLayout>
+</RelativeLayout>

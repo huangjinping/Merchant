@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/widget_item_toolbar" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/txt_customer_name"
+            style="@style/txtview_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txt_biaoqian"
+            style="@style/txtView_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="＃无成交历史"
+            android:textColor="@color/blue_light" />
+
+        <ImageView
+            style="@style/line"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            style="@style/txtView_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="手机"
+            android:textColor="@color/text_hint" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/txt_customer_phone"
+                style="@style/txtview_black"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+
+
+            <LinearLayout
+                android:id="@+id/layout_save_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_save_iphone"
+                    />
+                <TextView
+                    android:id="@+id/txt_save_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="同步到手机"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/blue_light"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <Button
+        android:background="@color/blue_light"
+        android:onClick="onCall"
+        android:textColor="@color/white"
+        android:text="拨打电话"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

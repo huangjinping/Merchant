@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/hd_toolbar"
+        layout="@layout/widget_item_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/layout_add_commodity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/ic_add"
+                        android:gravity="center_vertical"
+                        android:text=" 商品管理" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:drawableRight="@mipmap/ic_arrow_right"
+                        android:gravity="center_vertical"
+                        android:text="新增商品 "
+                        android:textColor="@color/blue_light" />
+                </RelativeLayout>
+
+
+                <ImageView
+                    style="@style/line"
+                    android:layout_width="match_parent" />
+
+                <LinearLayout
+                    android:id="@+id/layout_adminCommodity"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/txt_list_item_ul"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="已上架" />
+
+                        <TextView
+                            android:id="@+id/txt_putaway"
+                            style="@style/txt_list_item_ul"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="25" />
+                    </LinearLayout>
+
+                    <ImageView
+                        style="@style/line"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/txt_list_item_ul"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="待上架" />
+
+                        <TextView
+                            android:id="@+id/txt_awaitPutaway"
+                            style="@style/txt_list_item_ul"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2" />
+                    </LinearLayout>
+
+                    <ImageView
+                        style="@style/line"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/txt_list_item_ul"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="已下架" />
+
+                        <TextView
+                            android:id="@+id/txt_soldOut"
+                            style="@style/txt_list_item_ul"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/layout_add_employee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/ic_add"
+                        android:gravity="center_vertical"
+                        android:text=" 团队管理" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:drawableRight="@mipmap/ic_arrow_right"
+                        android:gravity="center_vertical"
+                        android:text="新增员工 "
+                        android:textColor="@color/blue_light" />
+                </RelativeLayout>
+
+
+                <ImageView
+                    style="@style/line"
+                    android:layout_width="match_parent" />
+
+                <LinearLayout
+                    android:id="@+id/layout_adminEmployee"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/txt_list_item_ul"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启用" />
+
+                        <TextView
+                            android:id="@+id/txt_startUser"
+                            style="@style/txt_list_item_ul"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3" />
+                    </LinearLayout>
+
+                    <ImageView
+                        style="@style/line"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/txt_list_item_ul"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="禁用" />
+
+                        <TextView
+                            android:id="@+id/txt_forbidUser"
+                            style="@style/txt_list_item_ul"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/txt_list_item_li"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1.创建做花呗分期业务的账号："
+                    />
+
+                <TextView
+                    style="@style/txt_list_item_li"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="新增员工--设置员工账号和密码；"
+
+                    />
+
+                <TextView
+                    style="@style/txt_list_item_li"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="2.扫码下载优选加App"
+
+                    />
+
+                <TextView
+                    style="@style/txt_list_item_li"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="员工用自己的账号登录优选加，开始做业务"
+                    />
+
+                <TextView
+                    style="@style/txt_list_item_li"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="请您规范交易，拒绝套现"
+                    android:textColor="@color/blue_light"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

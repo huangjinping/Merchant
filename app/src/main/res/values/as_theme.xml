@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ActionSheetStyle">
+        <item name="actionSheetBackground">@android:color/transparent</item>
+        <item name="cancelButtonBackground">@drawable/shap_actionsheet_buttonbackground</item>
+        <item name="otherButtonTopBackground">@drawable/actionsheet_top_border</item>
+        <item name="otherButtonMiddleBackground">@drawable/actionsheet_middle_border</item>
+        <item name="otherButtonBottomBackground">@drawable/actionsheet_bottom_border</item>
+        <item name="otherButtonSingleBackground">@drawable/shap_actionsheet_buttonbackground</item>
+        <item name="cancelButtonTextColor">@color/blue_light</item>
+        <item name="otherButtonTextColor">@color/blue_light</item>
+        <item name="actionSheetPadding">3dp</item>
+        <item name="otherButtonSpacing">0.3dp</item>
+        <item name="cancelButtonMarginTop">8dp</item>
+        <item name="actionSheetTextSize">14sp</item>
+    </style>
+
+
+
+
+
+
+
+
+</resources>

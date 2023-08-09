@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="20px"
+        android:padding="5dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_username"
+                style="@style/txt_list_item_li"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="张蕾" />
+            <TextView
+                android:id="@+id/txt_repayAmt"
+                style="@style/txt_list_item_li"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                tools:text="还款金额：1200" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_psDueDt"
+                style="@style/txt_list_item_li"
+                android:layout_width="0dp"
+                android:textColor="@color/blue_light"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="最后还款日：2017/10/10" />
+            <TextView
+                android:id="@+id/txt_days"
+                style="@style/txt_list_item_li"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_light"
+                android:layout_weight="1"
+                android:gravity="right"
+                tools:text="本期还剩2天" />
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/txt_commodityName"
+            style="@style/txt_list_item_li"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            tools:text="小区名/楼号/单元/楼层/房间号/房间标识"
+            />
+        <TextView
+            android:id="@+id/txt_desc"
+            style="@style/txt_list_item_li"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="小区名/楼号/单元/楼层/房间号/房间标识"
+            />
+
+
+
+
+        <TextView
+            android:id="@+id/txt_overDesc"
+            style="@style/txt_list_item_li"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:drawableLeft="@mipmap/ic_exclamatory_mark"
+            tools:text="支持分付君主动还款和到期自动扣款：尾号2380"
+            android:gravity="center_vertical"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/line"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/txt_phone_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="电话提醒(0次)"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:padding="5dp"
+                />
+               <ImageView
+                   android:layout_width="1dp"
+                   android:layout_height="match_parent"
+                    style="@style/line"
+                   />
+            <TextView
+                android:id="@+id/txt_message_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="短信提醒(0次)"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:padding="5dp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

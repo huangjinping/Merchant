@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/hd_toolbar"
+        layout="@layout/widget_item_toolbar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txt_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    tools:text="我们在2017/5/18 17:44 拨打客户XXX电话185 **** 7098" />
+
+                <TextView
+                    style="@style/txt_list_item_hl"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="结果："
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    tools:text="客户电话未接听（客户关机）" />
+
+                <TextView
+                    style="@style/txt_list_item_hl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="须知："
+                    android:textColor="@color/gray" />
+
+
+                <TextView
+                    style="@style/txt_list_item_li"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="如果客户不愿办理，请您备注中注明" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/txt_list_item_hl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商品信息" />
+
+                <ImageView
+                    style="@style/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/txt_commodityName"
+                    style="@style/txt_list_item_li"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="朝阳区利泽中二路101号启明国际大厦A座12层朝阳区利泽中二路101号启明国际大厦A座12层" />
+
+                <TextView
+                    android:id="@+id/txt_time_date"
+                    style="@style/txt_list_item_li"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="2016/12/05-2017/12/04（一年)" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_phone_message"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/txt_list_item_hl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:text="客户可接听时间选择" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_customer_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:text="2017/10/11 18:30" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="5dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/ic_blue_arrow_right" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="我们会根据您的反馈时间与客户进行联系，请告知客户注意接听010开头座机电话（以实际为准"
+                    android:textColor="@color/blue_light"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_upload_file"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/txt_list_item_hl"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:background="@color/background_gray"
+                    android:text="按要求重新上传资料附件，务必清晰完整"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    style="@style/line"
+                    android:layout_marginLeft="15dp" />
+
+                <com.hdfex.merchantqrshow.view.MGridView.MGridView
+                    android:id="@+id/grv_lease_contract"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="36dp"
+
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:horizontalSpacing="3dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="4"
+                    android:verticalSpacing="3dp" />
+
+                <ImageView style="@style/line" />
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/txt_list_item_hl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="5dp"
+                android:text="备注" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <EditText
+                    android:id="@+id/txt_remark"
+                    style="@style/txt_list_item_li"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:gravity="top"
+                    android:hint="如果有额外要求，请您注明"
+                    android:minLines="6" />
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/layout_appointment_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:padding="10dp"
+
+                >
+
+                <TextView
+                    style="@style/txt_list_item_hl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="查看往来跟进记录" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:padding="5dp"
+                    android:layout_height="30dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/ic_blue_arrow_right" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_submit"
+                style="@style/button_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="我已经和客户进行联系" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

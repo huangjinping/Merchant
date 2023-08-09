@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:background="@mipmap/ic_hongbao"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/img_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cancel"
+            android:layout_gravity="left"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_merchant_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/app_name"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="给你发一个红包"
+
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/txt_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+
+            android:textSize="20sp"
+
+            android:visibility="visible"
+            tools:text="奖励红包" />
+
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="100dp">
+          <TextView
+              android:id="@+id/txt_desc"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@color/white"
+              android:textSize="20sp"
+              android:layout_centerInParent="true"
+              android:visibility="visible"
+              tools:text="红包失效" />
+
+
+          <ImageView
+              android:id="@+id/img_open"
+              android:layout_width="100dp"
+              android:layout_height="100dp"
+              android:layout_centerInParent="true"
+              android:src="@mipmap/ic_redpackage_openon" />
+          <ImageView
+              android:id="@+id/img_opening"
+              android:layout_width="100dp"
+              android:layout_height="100dp"
+              android:layout_centerInParent="true"
+              android:background="@drawable/red_open_package"
+              android:visibility="gone" />
+
+
+      </RelativeLayout>
+        <TextView
+            android:id="@+id/txt_redpackage_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:textColor="@color/gray"
+            android:text="打开红包列表" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

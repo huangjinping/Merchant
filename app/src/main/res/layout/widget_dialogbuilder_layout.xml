@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/*
+** Copyright 2010, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_dialogbuilder_dialog_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/widget_builder_dialog_padding"
+    android:paddingRight="@dimen/widget_builder_dialog_padding">
+
+    <LinearLayout
+
+        android:id="@+id/widget_dialogbuilder_dialog_parentPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        android:background="@drawable/shape_alert_dialog"
+        android:clickable="false"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/widget_dialogbuilder_dialog_topPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_gray"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/widget_dialogbuilder_dialog_title_template"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginEnd="16dip"
+                android:layout_marginStart="16dip">
+
+                <ImageView
+                    android:id="@+id/widget_dialogbuilder_dialog_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dip"
+                    android:scaleType="centerInside"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/widget_dialogbuilder_dialog_alertTitle"
+                    style="@style/DialogWindowTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="8dip"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="标题"
+                    android:textColor="@color/black"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/widget_dialogbuilder_dialog_titleDivider"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/background_gray"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/widget_dialogbuilder_dialog_contentPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/widget_dialogbuilder_dialog_message"
+                style="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:paddingBottom="8dip"
+                android:paddingEnd="16dip"
+                android:paddingStart="16dip"
+                android:paddingTop="8dip"
+                android:text="test"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/customPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/widget_dialogbuilder_dialog_btn_button1"
+                style="@style/widget_dialogbuilder_dialog_btn"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="确定"
+                android:visibility="gone"
+                android:background="@color/transparent"
+                android:textColor="@color/blue_light" />
+
+            <Button
+                android:id="@+id/widget_dialogbuilder_dialog_btn_button2"
+                style="@style/widget_dialogbuilder_dialog_btn"
+                android:layout_marginLeft="10dp"
+                android:background="@color/transparent"
+
+                android:layout_marginRight="10dp"
+                android:text="取消"
+                android:textColor="@color/blue_light"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

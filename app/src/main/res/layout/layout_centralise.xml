@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <EditText
+            android:id="@+id/edt_centralise_building_name"
+            style="@style/et_common_style"
+            android:focusable="false"
+            android:hint="公寓名称"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/tv_common_left_style"
+            android:text="公寓名称" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_arrow_right" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <EditText
+            android:id="@+id/edt_centralise_address"
+            style="@style/et_common_style"
+            android:focusable="false"
+            android:hint="请输入所在楼层"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <com.hdfex.merchantqrshow.widget.DeleteEditText
+            android:id="@+id/edt_centralise_house_floor"
+            style="@style/et_common_style"
+            android:hint="请输入所在楼层"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/tv_common_left_style"
+            android:text="楼层" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <com.hdfex.merchantqrshow.widget.DeleteEditText
+            android:id="@+id/edt_centralise_house_no"
+            style="@style/et_common_style"
+            android:hint="如:1021/201"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/tv_common_left_style"
+            android:text="房间号" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="预览" />
+
+
+    <TextView
+        android:id="@+id/text_centrailse_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:textColor="@color/blue_light"
+
+        />
+</LinearLayout>

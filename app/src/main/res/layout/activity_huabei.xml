@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/widget_item_toolbar" />
+
+        <ScrollView
+            android:id="@+id/scrl_root"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/txt_commodity_name"
+                            style="@style/et_common_style"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:singleLine="false"
+                            android:textStyle="bold"
+                            tools:text="请输入小请输入小区名称请输入小区名称请输入小区名称请输入小区名称区名称" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:text="商品信息" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/txt_commodityBarCode"
+                            style="@style/et_common_style"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            tools:text="ASDOFIJAOSDIFASD" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:text="IMEI编码" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/txt_custName"
+                            style="@style/et_common_style"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            tools:text="张三丰" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:text="客户姓名" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/txt_custPhoneNo"
+                            style="@style/et_common_style"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            tools:text="13411290918" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:text="手机号" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/txt_totalAmount"
+                            style="@style/et_common_style"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            tools:text="6，8800" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:text="贷款金额" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/txt_duration"
+                            style="@style/et_common_style"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            tools:text="12" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:text="分期期数" />
+                    </FrameLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:visibility="gone"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        style="@style/tv_common_left_style"
+                        android:layout_height="45dp"
+                        android:visibility="gone"
+                        android:gravity="center_vertical"
+                        android:text="商家承担手续费" />
+
+                    <TextView
+                        android:id="@+id/txt_procedures"
+                        style="@style/tv_common_left_style"
+                        android:layout_height="45dp"
+                        android:gravity="center_vertical"
+                        android:text="手续费=贷款金额x费率"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/txt_preview"
+                        style="@style/tv_common_left_style"
+                        android:layout_height="45dp"
+                        android:gravity="center_vertical"
+                        tools:text="510=6800*7.5%"
+                        android:textColor="@color/red_light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:visibility="gone"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        style="@style/tv_common_left_style"
+                        android:layout_height="45dp"
+                        android:gravity="center_vertical"
+                        android:text="付款码" />
+
+                    <TextView
+                        android:id="@+id/txt_taobao_paycode"
+                        style="@style/tv_common_left_style"
+                        android:layout_height="45dp"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/blue_light" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+
+            android:id="@+id/layout_scan_huabei"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/hd_bt_common_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_back_edit"
+                android:layout_weight="1"
+                android:background="@drawable/btn_selector_yellow"
+                android:onClick="onRefox"
+                android:text="返回修改" />
+
+            <Button
+                android:id="@+id/btn_scan_huabei"
+                style="@style/hd_bt_common_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请扫描客户支付宝上的付款码" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

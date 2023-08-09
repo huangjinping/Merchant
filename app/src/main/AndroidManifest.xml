@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hdfex.merchantqrshow">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_merchant_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+
+        <activity
+            android:name=".salesman.main.activity.IndexActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.WellComeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".salesman.main.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.add.activity.CommodityListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".base.BaseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.add.activity.QRCodeProduceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.my.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".salesman.order.activity.OrderListManagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.order.activity.OrderListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.my.activity.LoadAppForCActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.add.activity.ConfirmorderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.main.activity.ScanRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.my.activity.AccountManagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.order.activity.OrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.add.activity.CreateCommodityActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".salesman.add.activity.UploadPhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.add.activity.PhotoViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.add.activity.PreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.add.activity.SelectionPicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.add.activity.PicturePreviewAlbumActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.customer.activity.CustomerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.main.activity.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.my.activity.WeixinActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.my.activity.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.order.activity.OrderDetailNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.order.activity.OrderListNewActvitity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.add.activity.UploadPhotoNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.jhworks.library.ui.ImageSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jhworks.library.ui.ImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".salesman.add.activity.UploadPhotoNewActivity1"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.add.activity.PreViewAndDeleteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.order.activity.BSYOrderDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.add.activity.BSYProductDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.add.activity.BSYSelectProductActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".activity.WebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".salesman.add.activity.AddHouseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.my.activity.ResourcesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.add.activity.SelectResourceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.add.activity.ZuFangQRCodeProduceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.add.activity.PeriodsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.add.activity.InstallmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.add.activity.UpLoadSendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.add.activity.RentCalculatorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".salesman.order.activity.PlanDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+
+        <!-- <provider -->
+        <!-- android:name="android.support.v4.content.FileProvider" -->
+        <!-- android:authorities="com.hdfex.merchantqrshow.provider" -->
+        <!-- android:exported="false" -->
+        <!-- android:grantUriPermissions="true"> -->
+        <!-- <meta-data -->
+        <!-- android:name="android.support.FILE_PROVIDER_PATHS" -->
+        <!-- android:resource="@xml/provider_paths"/> -->
+        <!-- </provider> -->
+
+        <activity
+            android:name=".salesman.order.activity.MutliOrderDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".manager.main.activity.ManagerIndexActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".manager.business.activity.ManagerOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".manager.finance.activity.TransactionRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".manager.finance.activity.TransactionDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".manager.finance.activity.ExpenditureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".manager.finance.activity.PaymentsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".manager.main.activity.ManagerMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".manager.finance.activity.IncomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".manager.team.activity.PersonnelManagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".manager.team.activity.SalesmanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".salesman.add.activity.ConfirmCommodityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name="com.google.zxing.client.android.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".salesman.add.activity.HuabeiActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <activity
+            android:name=".comm.taobao.TaobaoAuthActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".salesman.add.activity.HuaBeiSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".salesman.my.activity.MessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".salesman.add.activity.HuaBeiFailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".salesman.add.activity.HuabeiQuotaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".salesman.my.activity.MessageDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".salesman.add.activity.LinePaymentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".salesman.order.activity.OrderHuabeiActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme">
+
+        </activity>
+
+        <activity
+            android:name=".salesman.order.activity.PlanAlipayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".salesman.appointment.activity.AppointmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name=".salesman.customer.activity.BIZListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme">
+
+        </activity>
+        <activity
+            android:name=".salesman.my.activity.AuthenticationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".salesman.appointment.activity.FollowActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".salesman.appointment.activity.DataErrorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".salesman.appointment.activity.BackOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".salesman.appointment.activity.RepayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".salesman.add.activity.ScanPicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name="com.turui.bank.ocr.card.TRCardScan"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".salesman.appointment.activity.FollowRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".admin.bam.activity.AdminIndexActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".admin.bam.activity.AddEmployeeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".admin.bam.activity.AddCommodityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"></activity>
+
+        <activity
+            android:name=".admin.bam.activity.AdminCommodityListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".admin.bam.activity.EmployeeManagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".salesman.add.activity.CommodityListV2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".admin.financial.activity.BalancePaymentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".admin.business.activity.AdminOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".admin.business.activity.AdminOrderDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".admin.business.activity.AdminBusinessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme">
+
+        </activity>
+
+        <activity
+            android:name=".admin.business.activity.ExpandBusinessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".admin.my.activity.MergeQrCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".admin.my.activity.ReceiptQrCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".apliySale.main.activity.ReceiptMoneyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".apliySale.main.activity.ApliyMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".apliySale.main.activity.QRCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".admin.my.activity.AccountSecurityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".admin.my.activity.PayPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".admin.my.activity.AdminAuthenticationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".admin.my.activity.LoginPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".admin.my.activity.UpdatePasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".admin.my.activity.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme">
+
+        </activity>
+
+        <activity
+            android:name=".admin.my.activity.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".admin.my.activity.WithdrawPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".admin.my.activity.WithdrawConformPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".salesman.add.activity.CreateContractActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".salesman.add.activity.PayMonthlyQRCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".salesman.add.activity.MonthlyPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".salesman.order.activity.OrderMonthlyListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".salesman.add.activity.SelectPayResourceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".salesman.my.activity.SignResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".salesman.order.activity.MonthlyOrderDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+        <activity
+            android:name=".salesman.main.activity.AnimationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/translucent">
+
+        </activity>
+
+        <activity
+            android:name=".salesman.order.activity.ChangeFundSourceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity
+            android:name=".salesman.order.activity.WoFuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"></activity>
+
+        <activity android:name=".salesman.my.activity.PermissionDisplayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"
+            >
+        </activity>
+
+        <service android:name=".push.MyNotificationService"></service>
+        <service android:name=".push.MyPushIntentService"></service>
+        <service android:name=".push.NotificationService"></service>
+        <service android:name=".push.UmengNotificationService"></service>
+
+        <receiver android:name=".push.NotificationBroadcast"></receiver>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5786ee6fe0f55aa7e0002085" />
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="6df70a540db7138fab80733bd24b0008" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="fenfujun" />
+
+    </application>
+</manifest>

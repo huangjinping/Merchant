@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background_gray"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/hd_toolbar"
+        layout="@layout/widget_item_toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/txt_commodityName"
+                style="@style/et_common_style_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:hint="商户名称一行显示不完分两行，赏花名称显示不完分两行"
+                android:lines="2"
+                android:singleLine="false"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/tv_common_left_style"
+                android:text="手机号" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/txt_applyAmount"
+                style="@style/et_common_style_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:hint="6388"
+                android:singleLine="false"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/tv_common_left_style"
+                android:text="商品金额" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/txt_applyStatus"
+                style="@style/et_common_style_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:hint="已完成"
+                android:singleLine="false"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/tv_common_left_style"
+                android:text="订单状态" />
+        </FrameLayout>
+    </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:layout_marginTop="10dp"
+          android:orientation="vertical"
+          android:paddingLeft="10dp"
+          android:paddingBottom="10dp"
+          >
+          <FrameLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center">
+
+              <TextView
+                  android:id="@+id/txt_applyDate"
+                  style="@style/et_common_style_content"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  tools:hint="2017-12-18 17:22:11"
+                  android:singleLine="false"
+                  android:textStyle="bold" />
+
+              <TextView
+                  style="@style/tv_common_left_style"
+                  android:text="交易时间" />
+          </FrameLayout>
+          <FrameLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center">
+
+              <TextView
+                  android:id="@+id/txt_loanAmount"
+                  style="@style/et_common_style_content"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  tools:hint="45123.10"
+                  android:singleLine="false"
+                  android:textStyle="bold" />
+
+              <TextView
+                  style="@style/tv_common_left_style"
+                  android:text="分期金额" />
+          </FrameLayout>
+
+          <FrameLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center">
+
+              <TextView
+                  android:id="@+id/txt_applyDuration"
+                  style="@style/et_common_style_content"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  tools:hint="12期"
+                  android:singleLine="false"
+                  android:textStyle="bold" />
+
+              <TextView
+                  style="@style/tv_common_left_style"
+                  android:text="分期期数" />
+          </FrameLayout>
+
+
+      </LinearLayout>
+
+
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:background="@color/white"
+          android:layout_marginTop="10dp"
+          android:paddingLeft="10dp"
+          android:paddingBottom="10dp"
+          >
+
+          <FrameLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center">
+
+              <TextView
+                  android:id="@+id/txt_redpacketAmt"
+                  style="@style/et_common_style_content"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  tools:hint="200"
+                  android:singleLine="false"
+                  android:textStyle="bold" />
+
+              <TextView
+                  style="@style/tv_common_left_style"
+                  android:text="交易返佣" />
+          </FrameLayout>
+      </LinearLayout>
+</LinearLayout>

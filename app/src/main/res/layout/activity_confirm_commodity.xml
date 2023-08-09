@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/widget_item_toolbar" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:id="@+id/edt_commodity_name"
+                                style="@style/et_common_style"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:singleLine="false"
+                                android:enabled="false"
+                                android:textStyle="bold"
+                                android:hint="请输入商品名称"
+                                tools:text="请输入小请输入小区名称请输入小区名称请输入小区名称请输入小区名称区名称"
+                                />
+
+                            <TextView
+                                style="@style/tv_common_left_style"
+                                android:text="商品信息" />
+
+                        </FrameLayout>
+                        <TextView
+                            android:textColor="@color/blue_light"
+                            style="@style/tv_common_left_style"
+                            android:id="@+id/txt_select_commodity"
+                            android:visibility="gone"
+                            android:text="选择已有商品" />
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <EditText
+                            android:id="@+id/edt_commodityBarCode"
+                            style="@style/et_common_style"
+                            android:hint="扫描包装盒上的条形码"
+                            android:layout_marginRight="55dp"
+                            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:layout_centerVertical="true"
+                            android:text="IMEI编码" />
+
+                        <ImageView
+                            android:id="@+id/img_scan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/ic_scan_blue" />
+
+                    </RelativeLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_gravity="center">
+
+                        <com.hdfex.merchantqrshow.widget.DeleteEditText
+                            android:id="@+id/edt_amount"
+                            style="@style/et_common_style"
+                            android:hint="输入实际商品金额"
+                            android:inputType="numberDecimal"
+                            android:text="0"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:text="商品金额" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <com.hdfex.merchantqrshow.widget.DeleteEditText
+                            android:id="@+id/edt_custName"
+                            style="@style/et_common_style"
+                            android:hint="请输入客户真实姓名"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:text="客户姓名" />
+
+                    </FrameLayout>
+
+
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <com.hdfex.merchantqrshow.widget.DeleteEditText
+                            android:id="@+id/edt_custPhoneNo"
+                            style="@style/et_common_style"
+                            android:hint="请输入客户真实手机号"
+                            android:inputType="phone"
+                            android:maxLength="11"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:text="手机号" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:id="@+id/layout_custIdNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_gravity="center">
+
+                        <com.hdfex.merchantqrshow.widget.DeleteEditText
+                            android:id="@+id/edt_custIdNo"
+                            style="@style/et_common_style"
+                            android:digits="1234567890xX"
+                            android:hint="请输入客户身份证号码"
+                            android:inputType="text"
+                            android:maxLength="18"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:text="身份证号码" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/txt_extends"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="完善更多信息"
+                    android:textColor="@color/blue_light" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="支付方式"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_procedures"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/edt_procedures"
+                            style="@style/et_common_style"
+                            android:focusable="false"
+                            android:gravity="center"
+                            android:hint="请您选择"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:layout_centerVertical="true"
+                            android:text="客户是否承担手续费" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/ic_arrow_right" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@mipmap/ic_yiwein"
+                        android:text="包装盒上的条形码"
+                        android:textColor="@color/blue_light"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_huabei"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:paddingLeft="10dp">
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:layout_centerVertical="true"
+                            android:text="花呗分期" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/ic_arrow_right" />
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_pay_huabei"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <include layout="@layout/layout_huabei"></include>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_taobao"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:paddingLeft="10dp">
+
+                        <TextView
+                            style="@style/tv_common_left_style"
+                            android:layout_centerVertical="true"
+                            android:text="支付宝" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/ic_arrow_right" />
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_pay_taobao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <include layout="@layout/layout_taobao"></include>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btn_submit"
+                    style="@style/hd_bt_common_style"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="交易完成" />
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/fl_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout>
+</RelativeLayout>

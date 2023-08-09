@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray_light2"
+    android:orientation="vertical"
+    tools:context="com.hdfex.merchantqrshow.salesman.my.activity.AccountManagerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/widget_item_toolbar" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/txtview_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="头像" />
+
+                <TextView
+                    android:id="@+id/txt_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/txt_user_pic"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:src="@mipmap/ic_combined_shape" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_arrow_right" />
+                </LinearLayout>
+                
+            </LinearLayout>
+
+
+            <ImageView
+                style="@style/line"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    style="@style/txtView_confirm_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="姓名"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_username"
+                    style="@style/txtView_confirm_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:ellipsize="end"
+                    android:gravity="right|center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textSize="16dp"
+                    tools:text="李大钊"
+
+                    />
+
+            </LinearLayout>
+
+            <ImageView style="@style/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    style="@style/txtView_confirm_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="实名认证"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_authentication"
+                    style="@style/txtView_confirm_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableRight="@mipmap/ic_arrow_right"
+                    android:ellipsize="end"
+                    android:gravity="right|center_vertical"
+                    android:singleLine="true"
+                    android:text="去认证 "
+                    android:textColor="@color/blue_light"
+                    android:textSize="16dp"
+                    />
+
+            </LinearLayout>
+
+
+            <ImageView style="@style/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    style="@style/txtView_confirm_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="所属商户"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_bussinessName"
+                    style="@style/txtView_confirm_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/gray"
+                    android:textSize="16dp"
+                    tools:text="贷鱼科技" />
+
+            </LinearLayout>
+            <ImageView style="@style/line" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    style="@style/txtView_confirm_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="入职日期"
+                    android:textSize="16dp" />
+
+                <TextView
+                    style="@style/txtView_confirm_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableRight="@mipmap/ic_arrow_right"
+                    android:ellipsize="end"
+                    android:gravity="right|center_vertical"
+                    android:singleLine="true"
+                    android:id="@+id/txt_induction_time"
+                    android:text="去完善 "
+                    android:textColor="@color/blue_light"
+                    android:textSize="16dp"
+
+                    />
+
+            </LinearLayout>
+
+            <ImageView style="@style/line" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    style="@style/txtView_confirm_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="分组"
+                    android:textSize="16dp" />
+
+                <TextView
+
+                    android:id="@+id/tv_account_number"
+                    style="@style/txtView_confirm_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/gray"
+                    android:textSize="16dp"
+                    tools:text="销售一组" />
+
+            </LinearLayout>
+
+            <ImageView style="@style/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    style="@style/txtView_confirm_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="登录账号"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_phone"
+                    style="@style/txtView_confirm_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/gray"
+                    android:textSize="16dp"
+                    tools:text="132323" />
+
+            </LinearLayout>
+
+            <ImageView style="@style/line" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/btn_quit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/layer_bottom_border"
+        android:gravity="center"
+        android:text="退出当前账号"
+        android:textColor="@color/blue_light"
+        android:textSize="16dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

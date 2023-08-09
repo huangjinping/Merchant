@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray_light2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layout_header"
+            layout="@layout/widget_item_toolbar" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="最近一次提交日期" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <EditText
+                    android:id="@+id/et_startdata"
+                    style="@style/et_common_style"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="请选择开始日期"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/tv_common_left_style"
+                    android:layout_centerVertical="true"
+                    android:text="开始日期" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/ic_arrow_next_small" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <EditText
+                    android:id="@+id/et_entdata"
+                    style="@style/et_common_style"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="请选择租住月份"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/tv_common_left_style"
+                    android:layout_centerVertical="true"
+                    android:text="租住月份" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/ic_arrow_next_small" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <EditText
+                    android:id="@+id/et_unbinddata"
+                    style="@style/et_common_style"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="请选择解约日期"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/tv_common_left_style"
+                    android:layout_centerVertical="true"
+                    android:text="解约日期" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/ic_arrow_next_small" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/layout_innerdata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/tv_common_left_style"
+                        android:layout_centerVertical="true"
+                        android:text="已住时间" />
+
+                    <TextView
+                        android:id="@+id/txt_innerdata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="110dp"
+                        android:textSize="25sp"
+                        tools:text="4个月12天" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_outdata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_outdata_title"
+                        style="@style/tv_common_left_style"
+                        android:layout_centerVertical="true"
+                        android:text="超住时间" />
+
+                    <TextView
+                        android:id="@+id/txt_outdata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="110dp"
+                        android:textColor="@color/red_light"
+                        android:textSize="25sp"
+                        tools:text="4个月12天" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:paddingLeft="12dp">
+
+
+            <com.hdfex.merchantqrshow.widget.DeleteEditText
+                android:id="@+id/et_rentprice"
+                style="@style/et_common_style"
+                android:background="@color/white"
+                android:hint="请输入月租金"
+                android:inputType="numberDecimal"
+                android:maxLength="11"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/tv_common_left_style"
+                android:text="月租金" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/btn_submit"
+            style="@style/hd_bt_common_style"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:onClick="submit"
+            android:text="提交" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"></LinearLayout>
+</RelativeLayout>

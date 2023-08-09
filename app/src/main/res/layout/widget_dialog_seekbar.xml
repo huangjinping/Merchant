@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/rl_download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/widget_dialog_seekbar_header_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <!--<com.hdfex.merchantqrshow.utils.update.MySeekBar-->
+        <!--android:id="@+id/progressbar"-->
+        <!--style="?android:progressBarStyleHorizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--/>-->
+        <com.hdfex.merchantqrshow.widget.progressbar.IconRoundCornerProgressBar
+            android:id="@+id/ic_progress"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="35dp"
+            app:rcBackgroundColor="@color/transparent"
+            app:rcBackgroundPadding="2dp"
+            app:rcIconBackgroundColor="@color/btn_unpress_color"
+            app:rcIconPadding="5dp"
+            app:rcIconSize="40dp"
+            app:rcIconSrc="@mipmap/ic_merchant_logo"
+            app:rcMax="100"
+            app:rcProgressColor="@color/btn_press_color"
+            app:rcRadius="5dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="已下载：0%"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_download_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/rl_download"
+        android:background="@drawable/widget_dialog_seekbar_bottom_bg"
+        android:gravity="center"
+        android:text="正在更新……请稍侯！"
+        android:textColor="#ffffff"
+        android:textSize="18dp" />
+
+</RelativeLayout>

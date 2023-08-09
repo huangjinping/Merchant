@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/ic_arrow_left" />
+
+        <com.flyco.tablayout.SegmentTabLayout
+            android:id="@+id/layout_segment"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            app:tl_indicator_color="@color/blue_light"
+            app:tl_indicator_corner_radius="3dp"
+            app:tl_tab_padding="10dp"
+            app:tl_tab_width="80dp"
+            app:tl_textSelectColor="@color/white"
+            app:tl_textUnselectColor="@color/blue_light"
+            app:tl_textsize="16sp"></com.flyco.tablayout.SegmentTabLayout>
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vip_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:background="@color/white"
+    android:paddingRight="10dp"
+    android:orientation="vertical">
+
+    <ImageView
+        style="@style/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <com.hdfex.merchantqrshow.widget.DeleteEditText
+            style="@style/et_common_style"
+            android:hint="请输入法人姓名"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/tv_common_left_style"
+            android:text="姓名" />
+    </FrameLayout>
+
+    <ImageView
+        style="@style/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <com.hdfex.merchantqrshow.widget.DeleteEditText
+            style="@style/et_common_style"
+            android:hint="请输入法人手机号"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/tv_common_left_style"
+            android:text="手机号" />
+    </FrameLayout>
+    <ImageView
+        style="@style/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <com.hdfex.merchantqrshow.widget.DeleteEditText
+            style="@style/et_common_style"
+            android:hint="将作为管理员账号登录优选加"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/tv_common_left_style"
+            android:text="邮箱" />
+    </FrameLayout>
+</LinearLayout>

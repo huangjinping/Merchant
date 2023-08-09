@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bg_gray_light_half">#91000000</color>
+
+    <color name="bg_gray_light">#F3F3F3</color>
+    <color name="bg_gray_light2">#F0F0F0</color>
+    <color name="bg_gray_light3">#D9D9D9</color>
+    <color name="bg_gray_qrcode">#F4F7F8</color>
+    <color name="gray_30">#c1292929</color>
+    <color name="blue_light">#3492E9</color>
+    <color name="blue_transparent_light">#553492E9</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="translucence">#c8000000</color>
+    <color name="transparent_quarter">#40000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="red_light">#E84C3D</color>
+    <color name="black">#000000</color>
+    <color name="yellow_light">#FF9000</color>
+    <color name="gray">#464646</color>
+    <color name="line_gray">#DDDDDD</color>
+    <color name="line">#EDEDED</color>
+
+    <color name="text_color">#0E0E0E</color>
+    <color name="text_color2">#050505</color>
+    <color name="text_color3">#323232</color>
+    <color name="text_color4">#2B2B2B</color>
+    <color name="text_hint">#ABABAB</color>
+    <color name="text_hint2">#B3B3B3</color>
+    <color name="text_hint3">#A8A8A8</color>
+    <color name="text_hint4">#CBCBCB</color>
+    <color name="text_hint5">#4e2b2b2b</color>
+    <color name="text_cart">#4C4C4C</color>
+    <color name="text_press">#D6D6D6</color>
+    <color name="divider_color">#ffffff</color>
+    <color name="msg_color">#FFFFFFFF</color>
+
+    <color name="btn_press_color">#2385e1</color>
+    <color name="btn_unpress_color">#3aa0ff</color>
+    <color name="dialog_bg">#ffffff</color>
+    <color name="text_status_reject">#9E9E9E</color>
+    <color name="btn_yellow_press_color">#E28000</color>
+    <color name="btn_yellow_unpress_color">#FF9000</color>
+    <color name="btn_back_green">#3cab35</color>
+
+    <color name="house_gray">#9d9d9d</color>
+
+    <color name="background_gray">#eeeeee</color>
+    <color name="common_text_gray">#999999</color>
+    <color name="common_top_bg">#303F9F</color>
+    <color name="common_tab_btn">#303F9F</color>
+    <color name="common_char_line">#e5d7b0</color>
+    <color name="common_line_chartview_scal">#bababa</color>
+    <color name="common_point_line">#ECECEC</color>
+
+    　　
+    <color name="translucent">#01000000</color>
+
+
+    <color name="order_red">#E84C3D</color>
+    <color name="order_blue">#3492E9</color>
+    <color name="order_black">#323232</color>
+    <color name="order_gray">#B8B8B8</color>
+
+
+    <color name="black_32">#50000000</color>
+    <color name="text_installment">#3E3E3E</color>
+
+</resources>

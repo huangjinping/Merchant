@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_item_orderlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txt_order_status"
+                style="@style/txtView_nomal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text=""
+                android:textColor="@color/text_color"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/txt_order_time"
+                style="@style/txtView_nomal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="2013-12-43"
+                android:textColor="@color/text_hint"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <ImageView
+            style="@style/line"
+            android:layout_marginLeft="15dp" />
+
+        <include layout="@layout/item_orderdetails"></include>
+
+        <ImageView style="@style/line" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+</LinearLayout>

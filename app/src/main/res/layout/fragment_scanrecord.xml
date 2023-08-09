@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.hdfex.merchantqrshow.widget.MultiStateView
+        android:id="@+id/multiStateView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:msv_emptyView="@layout/layout_multistateview_resource_empty_view"
+        app:msv_errorView="@layout/layout_multistateview_error_view"
+        app:msv_loadingView="@layout/layout_multistateview_loading_view"
+        app:msv_viewState="content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></LinearLayout>
+    </com.hdfex.merchantqrshow.widget.MultiStateView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.hdfex.merchantqrshow.view.xlistView.XListView
+            android:id="@+id/lisv_scanrecord"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/transparent"
+            android:scrollbars="none"/>
+    </LinearLayout>
+</RelativeLayout>

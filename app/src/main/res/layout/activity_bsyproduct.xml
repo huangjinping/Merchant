@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/widget_item_toolbar" />
+
+    <include layout="@layout/item_bsyselect" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="10dp">
+
+
+        <TextView
+            style="@style/tv_common_left_style"
+            android:layout_height="wrap_content"
+            android:text="完善买家信息" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <com.hdfex.merchantqrshow.widget.DeleteEditText
+                    android:id="@+id/et_customer_name"
+                    style="@style/et_common_style"
+                    android:hint="请填写真实姓名，方便收货"
+                    android:inputType="text"
+                    android:maxLength="18"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/tv_common_left_style"
+                    android:text="买家姓名" />
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.hdfex.merchantqrshow.widget.DeleteEditText
+                    android:id="@+id/et_live_addrProvince"
+                    style="@style/et_common_style"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="请选择省／市／区"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textStyle="bold" />
+
+                <com.hdfex.merchantqrshow.widget.DeleteEditText
+                    android:id="@+id/et_live_addrTown"
+                    style="@style/et_common_style"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_live_addrProvince"
+                    android:hint="请填写详细地址"
+                    android:maxEms="50"
+                    android:singleLine="false"
+                    android:text=""
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/tv_common_left_style"
+                    android:layout_marginTop="13dp"
+                    android:text="详细地址" />
+            </RelativeLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <com.hdfex.merchantqrshow.widget.DeleteEditText
+                    android:id="@+id/et_customer_phone"
+                    style="@style/et_common_style"
+                    android:hint="请填写真实手机号，方便收货"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/tv_common_left_style"
+                    android:text="手机号" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/hd_bt_common_style"
+            android:layout_gravity="center"
+            android:text="确认下单" />
+    </RelativeLayout>
+
+
+</LinearLayout>

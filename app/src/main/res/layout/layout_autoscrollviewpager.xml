@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.hdfex.merchantqrshow.view.autoscroll.AutoScrollViewPager
+        android:id="@+id/vip_autoscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.hdfex.merchantqrshow.view.autoscroll.AutoScrollViewPager>
+
+
+    <LinearLayout
+        android:id="@+id/layout_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignBottom="@id/vip_autoscroll"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="3dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+</RelativeLayout>

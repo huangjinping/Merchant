@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <com.hdfex.merchantqrshow.widget.DeleteEditText
+            android:id="@+id/edt_custPhoneNo"
+            style="@style/et_common_style"
+            android:hint="请于营业执照上名称保持一致"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/tv_common_left_style"
+            android:text="商户名称" />
+    </FrameLayout>
+
+    <ImageView
+        style="@style/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/tv_common_left_style"
+            android:text="所有地区" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/et_common_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请选择"
+                android:textColor="@color/text_hint5" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/ic_arrow_right" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        style="@style/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <com.hdfex.merchantqrshow.widget.DeleteEditText
+            style="@style/et_common_style"
+            android:hint="如***路***号"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/tv_common_left_style"
+            android:text="详细地址" />
+    </FrameLayout>
+
+    <ImageView
+        style="@style/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <com.hdfex.merchantqrshow.widget.DeleteEditText
+            style="@style/et_common_style"
+            android:hint="手机或座机号"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/tv_common_left_style"
+            android:text="联系电话" />
+    </FrameLayout>
+
+    <ImageView
+        style="@style/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+</LinearLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/background_gray"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/hd_toolbar"
+        layout="@layout/widget_item_toolbar" />
+
+
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <LinearLayout
+               android:id="@+id/layout_create"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:visibility="gone"
+               android:orientation="vertical"
+               >
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="100dp"
+                   android:orientation="vertical"
+                   android:background="@color/blue_light"
+                   android:gravity="center"
+                   >
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="上传收款二维码"
+                       android:textColor="@color/white"
+                       android:textSize="20sp"
+                       />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_marginTop="20dp"
+                   >
+                   <ImageView
+                       android:id="@+id/img_wx"
+                       android:layout_width="0dp"
+                       android:layout_weight="1"
+                       android:layout_height="100dp"
+                       android:src="@mipmap/ic_wx_qrcode_default"
+
+                       />
+                   <ImageView
+                       android:id="@+id/img_alipay"
+                       android:layout_weight="1"
+                       android:layout_width="0dp"
+                       android:layout_height="100dp"
+                       android:src="@mipmap/ic_alipay_qrcode_default"
+                       />
+               </LinearLayout>
+
+
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:gravity="center_vertical"
+                   android:layout_marginTop="10dp"
+                   android:visibility="invisible"
+                   >
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="向"
+                       android:padding="10dp"
+                       />
+                   <EditText
+                       android:layout_width="0dp"
+                       android:layout_weight="1"
+                       android:layout_height="wrap_content"
+                       android:padding="5dp"
+                       android:text="收款人"
+                       android:textSize="14sp"
+                       android:background="@drawable/shape_gray2_border_redis"
+
+                       />
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="付款"
+                       android:padding="10dp"
+
+                       />
+               </LinearLayout>
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textSize="12sp"
+
+                   android:visibility="invisible"
+                   android:gravity="center"
+                   android:text="收款人名称会显示在微信收款界面(收款)"
+                   android:layout_margin="10dp"
+                   />
+
+               <Button
+                   android:onClick="onMerge"
+                   android:layout_gravity="center"
+                   android:layout_width="150dp"
+                   android:layout_height="35dp"
+                   android:layout_marginTop="20dp"
+                   android:text="免费合并"
+                   android:textColor="@color/white"
+                   android:background="@drawable/shape_blue_button"
+                   />
+
+           </LinearLayout>
+
+           <LinearLayout
+
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical"
+               android:id="@+id/layout_reset"
+               android:layout_margin="20dp"
+               android:visibility="gone"
+               android:background="@color/white"
+               >
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="微信或支付宝扫一扫"
+                   android:gravity="center"
+                   android:layout_marginTop="10dp"
+
+                   />
+               <ImageView
+                   android:id="@+id/img_qrcode"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_margin="20dp"
+                   android:layout_weight="1" />
+
+               <Button
+                   android:layout_width="match_parent"
+                   android:layout_height="35dp"
+                   android:layout_margin="20dp"
+                   android:background="@drawable/shape_blue_button"
+                   android:onClick="onReset"
+                   android:text="重新生成"
+                   android:textColor="@color/white" />
+           </LinearLayout>
+
+       </RelativeLayout>
+
+</LinearLayout>

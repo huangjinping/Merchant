@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/layout_root"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:src="@mipmap/ic_arrow_left" />
+
+            <EditText
+                android:id="@+id/edt_resources_search"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_serch_edittext"
+                android:drawableLeft="@mipmap/ic_search"
+                android:drawablePadding="10dp"
+                android:hint="请输入小区或公寓进行搜索，可精确到房间"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txt_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"
+                android:layout_centerVertical="true"
+                android:text="搜索" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <com.hdfex.merchantqrshow.widget.MultiStateView
+                android:id="@+id/multiStateView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:msv_emptyView="@layout/layout_multistateview_resource_empty_view"
+                app:msv_errorView="@layout/layout_multistateview_error_view"
+                app:msv_loadingView="@layout/layout_multistateview_loading_view"
+                app:msv_viewState="content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></LinearLayout>
+
+            </com.hdfex.merchantqrshow.widget.MultiStateView>
+
+
+
+            <com.hdfex.merchantqrshow.view.xlistView.XListView
+                android:id="@+id/lisv_resource_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </com.hdfex.merchantqrshow.view.xlistView.XListView>
+
+
+
+            <LinearLayout
+                android:id="@+id/layout_search"
+                android:layout_width="match_parent"
+                android:layout_marginTop="50dp"
+                android:layout_height="wrap_content">
+                <ListView
+                    android:id="@+id/lisv_seatch_resoult"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="#c8c7cc"
+                    android:dividerHeight="1px"
+                    android:paddingLeft="10dp"></ListView>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

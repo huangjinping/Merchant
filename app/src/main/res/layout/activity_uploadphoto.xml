@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_header"
+        layout="@layout/widget_item_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/hd_bt_common_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector_yellow"
+            android:onClick="onPriview"
+            android:text="预览" />
+
+        <Button
+            style="@style/hd_bt_common_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onQRCode"
+            android:text="生成二维码"
+          />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_bottom"
+        android:layout_below="@id/layout_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_add_more"
+                        style="@style/txtView_nomal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/gray_30"
+                        android:gravity="right|center_vertical"
+                        android:text="历史上传记录" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="15dp"
+                        android:src="@mipmap/ic_mian_arrow_right" />
+
+                </LinearLayout>
+
+                <ImageView
+                    style="@style/line"
+                    android:layout_marginBottom="11dp" />
+
+                <ImageView style="@style/line" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <TextView
+                    style="@style/txtView_nomal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:text="租赁合同（全部拍照上传）" />
+
+                <ImageView
+                    style="@style/line"
+                    android:layout_marginLeft="15dp" />
+
+                <com.hdfex.merchantqrshow.view.MGridView.MGridView
+                    android:id="@+id/grv_lease_contract"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="36dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:horizontalSpacing="3dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="4"
+                    android:verticalSpacing="3dp" />
+
+                <ImageView style="@style/line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <ImageView style="@style/line" />
+
+                <TextView
+                    style="@style/txtView_nomal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="14dp"
+                    android:gravity="center_vertical"
+                    android:text="代理合同（房产证复印件／代理协议等）" />
+
+                <ImageView
+                    style="@style/line"
+                    android:layout_marginLeft="15dp" />
+
+                <com.hdfex.merchantqrshow.view.MGridView.MGridView
+                    android:id="@+id/grv_agency_contract"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="36dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:horizontalSpacing="3dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="4"
+                    android:verticalSpacing="3dp" />
+
+                <ImageView style="@style/line" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/hd_toolbar"
+        layout="@layout/widget_item_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+
+                android:paddingRight="5dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_commodityCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/txt_list_item_ul"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="商品类型" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/txt_commoditCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@mipmap/ic_arrow_right"
+                        android:text="数码/手机 "
+                        android:textColor="@color/blue_light"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView style="@style/line" />
+
+                <LinearLayout
+                    android:id="@+id/layout_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/txt_list_item_ul"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="品牌" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/txt_categoryName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@mipmap/ic_arrow_right"
+                        android:text=""
+                        android:textColor="@color/blue_light"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView style="@style/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/txt_list_item_ul"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="商品名称" />
+
+                    <EditText
+                        android:id="@+id/edt_commodityName"
+                        android:layout_width="0dp"
+                        style="@style/txt_list_item_li"
+
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:gravity="right"
+                        android:hint="商品名称" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/txt_list_item_ul"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="商品金额" />
+
+                    <EditText
+                        android:id="@+id/edt_commodityPrice"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/txt_list_item_li"
+                        android:background="@color/transparent"
+                        android:gravity="right"
+                        android:inputType="numberDecimal"
+                        android:hint="请输入商品金额" />
+                </LinearLayout>
+
+                <ImageView style="@style/line" />
+
+                <LinearLayout
+                    android:id="@+id/layout_caseId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/txt_list_item_ul"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="分期方案" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+
+
+                    <EditText
+                        android:id="@+id/edt_caseIds"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/txt_list_item_li"
+                        android:drawableRight="@mipmap/ic_arrow_right"
+                        android:background="@color/transparent"
+                        android:gravity="right"
+                        android:textColor="@color/blue_light"
+                        android:focusable="false"
+                        android:inputType="numberDecimal"
+                        android:hint="请选择分期方式" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="商品图"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="（至少上传一张）"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <ImageView
+                    style="@style/line"
+                    android:layout_marginLeft="15dp" />
+
+                <LinearLayout
+                    android:id="@+id/layout_grid_upload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"></LinearLayout>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_submit"
+                style="@style/button_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="上架" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

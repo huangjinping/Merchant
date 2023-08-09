@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_rent_pact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <ImageView style="@style/line" />
+
+        <TextView
+            style="@style/txtView_confirm_order"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:text="租赁合同" />
+
+        <ImageView
+            style="@style/line"
+            android:layout_marginLeft="15dp" />
+
+        <com.hdfex.merchantqrshow.view.MGridView.MGridView
+            android:id="@+id/grv_lease_contract"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:horizontalSpacing="3dp"
+            android:verticalSpacing="3dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4" />
+    </LinearLayout>
+
+    <ImageView style="@style/line" />
+
+    <LinearLayout
+        android:id="@+id/ll_agency_pact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView style="@style/line" />
+
+        <TextView
+            style="@style/txtView_confirm_order"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:text="代理合同" />
+
+        <ImageView
+            style="@style/line"
+            android:layout_marginLeft="15dp" />
+
+        <com.hdfex.merchantqrshow.view.MGridView.MGridView
+            android:id="@+id/grv_agency_contract"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="30dp"
+            android:horizontalSpacing="3dp"
+            android:verticalSpacing="3dp"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4" />
+    </LinearLayout>
+
+    <ImageView style="@style/line" />
+</LinearLayout>
